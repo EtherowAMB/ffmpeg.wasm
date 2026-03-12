@@ -55,6 +55,9 @@ RUN bash -x /src/build.sh \
       --enable-filter=crop \
       --enable-filter=hstack \
       --enable-filter=scale \
+      --enable-filter=format \
+      --enable-filter=null \
+      --enable-filter=anull \
       --enable-bsf=aac_adtstoasc \
       --enable-swscale \
       --enable-avfilter \
