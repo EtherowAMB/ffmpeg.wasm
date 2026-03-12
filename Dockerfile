@@ -37,12 +37,25 @@ RUN bash -x /src/build.sh \
       --disable-everything \
       --enable-gpl \
       --enable-libx264 \
-      --enable-encoder=libx264 \
-      --enable-decoder=h264,aac \
-      --enable-muxer=mp4 \
-      --enable-demuxer=mov \
       --enable-protocol=file \
-      --enable-filter=crop,hstack \
+      --enable-encoder=libx264 \
+      --enable-encoder=aac \
+      --enable-decoder=h264 \
+      --enable-decoder=hevc \
+      --enable-decoder=av1 \
+      --enable-decoder=aac \
+      --enable-parser=h264 \
+      --enable-parser=hevc \
+      --enable-parser=av1 \
+      --enable-parser=aac \
+      --enable-demuxer=mov \
+      --enable-demuxer=mp4 \
+      --enable-demuxer=aac \
+      --enable-muxer=mp4 \
+      --enable-filter=crop \
+      --enable-filter=hstack \
+      --enable-filter=scale \
+      --enable-bsf=aac_adtstoasc \
       --enable-swscale \
       --enable-avfilter \
       --enable-avformat \
